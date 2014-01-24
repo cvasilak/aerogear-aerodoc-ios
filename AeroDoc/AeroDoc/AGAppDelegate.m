@@ -76,33 +76,38 @@
 // When the program is in the foreground, this callback receives the Payload of the received Push Notification message
 - (void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo {
 
+}
+
+
+- (void) application:(UIApplication *)application
+  didReceiveRemoteNotification:(NSDictionary *)userInfo
+        fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler {
+    NSLog(@"Remote Notification userInfo is %@", userInfo);
+    
     NSString *recId = userInfo[@"id"];
     NSString *name = userInfo[@"name"];
     NSString *phone = userInfo[@"phone"];
     NSString *location = userInfo[@"location"];
     NSString *messageType = userInfo[@"messageType"];
-
+    
     if ([messageType isEqual:@"accepted_lead"]) {
         // send to interest parties
         NSNotification *notification = [NSNotification notificationWithName:@"LeadAcceptedNotification"
                                                                      object:userInfo];
         [[NSNotificationCenter defaultCenter] postNotification:notification];
         DLog(@"Lead accepted: id=%@ name=%@ location=%@ phone=%@ messageType=%@", recId, name, location, phone, messageType);
-
+        
     } else {
-        UIAlertView *alert = [[UIAlertView alloc]
-                              initWithTitle: @""
-                              message: [NSString stringWithFormat: @"Lead %@ is available!", name]
-                              delegate: nil
-                              cancelButtonTitle:@"OK"
-                              otherButtonTitles:nil];
-        [alert show];
         // send to interest parties
         NSNotification *notification = [NSNotification notificationWithName:@"LeadAddedNotification"
                                                                      object:userInfo];
         [[NSNotificationCenter defaultCenter] postNotification:notification];
         DLog(@"Lead pushed: id=%@ name=%@ location=%@ phone=%@ messageType=%@", recId, name, location, phone, messageType);
     }
+
+    // Do something with the content ID
+    completionHandler(UIBackgroundFetchResultNewData);
 }
+
 
 @end

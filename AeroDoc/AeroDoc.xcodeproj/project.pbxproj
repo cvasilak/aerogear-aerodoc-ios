@@ -348,6 +348,15 @@
 				CLASSPREFIX = AG;
 				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = AeroGear;
+				TargetAttributes = {
+					481BE869176F155A00960BDF = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+				};
 			};
 			buildConfigurationList = 481BE865176F155900960BDF /* Build configuration list for PBXProject "AeroDoc" */;
 			compatibilityVersion = "Xcode 3.2";
