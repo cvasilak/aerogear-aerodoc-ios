@@ -338,7 +338,7 @@
 				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = AeroGear;
 			};
-			buildConfigurationList = 481BE865176F155900960BDF /* Build configuration list for PBXProject "aerodoc" */;
+			buildConfigurationList = 481BE865176F155900960BDF /* Build configuration list for PBXProject "AeroDoc" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -517,7 +517,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -541,7 +541,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = NO;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
@@ -616,7 +616,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		481BE865176F155900960BDF /* Build configuration list for PBXProject "aerodoc" */ = {
+		481BE865176F155900960BDF /* Build configuration list for PBXProject "AeroDoc" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				481BE8A6176F155A00960BDF /* Debug */,
