@@ -7,10 +7,3 @@ before_install:
 
 script:
     - set -o pipefail && xcodebuild -workspace AeroDoc.xcworkspace -scheme AeroDoc -sdk iphonesimulator -configuration Release clean build | xcpretty -c
-
-notifications:
-  irc: "irc.freenode.org#aerogear"
-
-branches:
-  only:
-    - master
